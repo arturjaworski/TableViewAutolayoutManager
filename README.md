@@ -4,6 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/TableViewAutolayoutManager.svg?style=flat)](http://cocoapods.org/pods/TableViewAutolayoutManager)
 [![Platform](https://img.shields.io/cocoapods/p/TableViewAutolayoutManager.svg?style=flat)](http://cocoapods.org/pods/TableViewAutolayoutManager)
 
+## Description
+
+![](/Demo/screenshot1.png) 
+
+Automatically takes care of custom UITableViewCell dynamic height. Written in Swift.
+
 ## Installation
 
 TableViewAutolayoutManager is available through [CocoaPods](http://cocoapods.org). To install

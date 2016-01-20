@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-                       Automatically taking care of dynamic custom UITableViewCell height. Written in Swift.
+                       Automatically takes care of custom UITableViewCell dynamic height. Written in Swift.
                        DESC
 
   s.homepage         = "https://github.com/arturjaworski/TableViewAutolayoutManager"
