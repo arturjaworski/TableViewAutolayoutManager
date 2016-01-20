@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		16E640BF4BDAB3CD1AA7BBB6 /* Pods_TableViewAutolayoutManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9173B6747AADF776A589C18D /* Pods_TableViewAutolayoutManager_Tests.framework */; };
+		213445D51C4FABCD00A4880C /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213445D11C4FABCD00A4880C /* TextTableViewCell.xib */; };
+		213445D61C4FABCD00A4880C /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213445D21C4FABCD00A4880C /* TextTableViewCell.swift */; };
+		213445D71C4FABCD00A4880C /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213445D31C4FABCD00A4880C /* ImageTableViewCell.xib */; };
+		213445D81C4FABCD00A4880C /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213445D41C4FABCD00A4880C /* ImageTableViewCell.swift */; };
+		213445DA1C4FABD500A4880C /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213445D91C4FABD500A4880C /* Label.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +34,11 @@
 
 /* Begin PBXFileReference section */
 		1AA2984179F20FA2E234E104 /* Pods-TableViewAutolayoutManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewAutolayoutManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableViewAutolayoutManager_Tests/Pods-TableViewAutolayoutManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		213445D11C4FABCD00A4880C /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		213445D21C4FABCD00A4880C /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		213445D31C4FABCD00A4880C /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		213445D41C4FABCD00A4880C /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		213445D91C4FABD500A4880C /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		40A9BB5FCB0099FC504B82DF /* Pods-TableViewAutolayoutManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewAutolayoutManager_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableViewAutolayoutManager_Example/Pods-TableViewAutolayoutManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TableViewAutolayoutManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewAutolayoutManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +79,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213445CF1C4FABAD00A4880C /* UI Controls */ = {
+			isa = PBXGroup;
+			children = (
+				213445D01C4FABB500A4880C /* TableView Cells */,
+				213445D91C4FABD500A4880C /* Label.swift */,
+			);
+			name = "UI Controls";
+			sourceTree = "<group>";
+		};
+		213445D01C4FABB500A4880C /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				213445D11C4FABCD00A4880C /* TextTableViewCell.xib */,
+				213445D21C4FABCD00A4880C /* TextTableViewCell.swift */,
+				213445D31C4FABCD00A4880C /* ImageTableViewCell.xib */,
+				213445D41C4FABCD00A4880C /* ImageTableViewCell.swift */,
+			);
+			name = "TableView Cells";
+			sourceTree = "<group>";
+		};
 		29ACFBD322498A46EABA1C91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +132,7 @@
 		607FACD21AFB9204008FA782 /* Example for TableViewAutolayoutManager */ = {
 			isa = PBXGroup;
 			children = (
+				213445CF1C4FABAD00A4880C /* UI Controls */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -246,8 +277,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213445D71C4FABCD00A4880C /* ImageTableViewCell.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				213445D51C4FABCD00A4880C /* TextTableViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +392,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213445D61C4FABCD00A4880C /* TextTableViewCell.swift in Sources */,
+				213445D81C4FABCD00A4880C /* ImageTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				213445DA1C4FABD500A4880C /* Label.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

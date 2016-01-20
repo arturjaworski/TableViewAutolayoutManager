@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "TableViewAutolayoutManager"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of TableViewAutolayoutManager."
+  s.version          = "0.1"
+  s.summary          = "Dynamic custom UITableViewCell height based on autolayout."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,13 +17,14 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+                       Automatically taking care of dynamic custom UITableViewCell height. Written in Swift.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/TableViewAutolayoutManager"
+  s.homepage         = "https://github.com/arturjaworski/TableViewAutolayoutManager"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Artur Jaworski" => "kontakt@arturjaworski.pl" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/TableViewAutolayoutManager.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/arturjaworski/TableViewAutolayoutManager.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
@@ -35,6 +36,6 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  s.dependency 'TableViewManager'
 end

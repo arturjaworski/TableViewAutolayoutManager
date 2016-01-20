@@ -1,0 +1,6 @@
+framework module TableViewAutolayoutManager {
+  umbrella header "TableViewAutolayoutManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

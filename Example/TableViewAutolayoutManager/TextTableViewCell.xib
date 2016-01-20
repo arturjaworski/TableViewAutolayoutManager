@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextTableViewCell" rowHeight="206" id="ewU-JO-5ah" customClass="TextTableViewCell" customModule="TableViewManager_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ewU-JO-5ah" id="NpC-kb-Cf7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="205.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="3A4-Y1-Jdg" customClass="Label" customModule="TableViewManager_Example" customModuleProvider="target">
+                        <rect key="frame" x="16" y="8" width="296" height="189.5"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.1555452387" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="3A4-Y1-Jdg" secondAttribute="trailing" id="dAd-Ck-oRg"/>
+                    <constraint firstItem="3A4-Y1-Jdg" firstAttribute="top" secondItem="NpC-kb-Cf7" secondAttribute="topMargin" id="h5D-gS-378"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3A4-Y1-Jdg" secondAttribute="bottom" id="rCR-zZ-dl3"/>
+                    <constraint firstItem="3A4-Y1-Jdg" firstAttribute="leading" secondItem="NpC-kb-Cf7" secondAttribute="leadingMargin" id="xcB-8r-lrJ"/>
+                </constraints>
+                <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="8"/>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myLabel" destination="3A4-Y1-Jdg" id="tLr-pO-Hkf"/>
+            </connections>
+            <point key="canvasLocation" x="108" y="297"/>
+        </tableViewCell>
+    </objects>
+</document>
