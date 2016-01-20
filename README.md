@@ -6,9 +6,9 @@
 
 ## Description
 
-<img src="/Demo/screenshot1.png" width="250">
-
 Automatically takes care of custom UITableViewCell dynamic height. Written in Swift.
+
+<img src="/Demo/screenshot1.png" width="250">
 
 ## Installation
 
