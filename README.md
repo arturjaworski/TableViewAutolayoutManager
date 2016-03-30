@@ -23,7 +23,7 @@ pod "TableViewAutolayoutManager"
 
 ### Before you use it
 
-TableViewAutolayoutManager inherits from TableViewManager. Please [see TableViewManager](https://github.com/arturjaworski/TableViewManager) first.
+TableViewAutolayoutManager requires TableViewManager. Please [see TableViewManager](https://github.com/arturjaworski/TableViewManager) first.
 
 Please be sure that you have to use this pod. In most cases [self sizing cells](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html) is enough.
 
@@ -31,24 +31,28 @@ TableViewAutolayoutManager using UIView `systemLayoutSizeFittingSize(_:)` to cal
 
 ### Step 1
 
-Do all steps described in [TableViewManager](https://github.com/arturjaworski/TableViewManager), but do it with `TableViewAutolayoutManager` instead of `TableViewManager` and `TableViewAutolayoutManagerProtocol` instead of `TableViewManagerProtocol`.
+Do all steps described in [TableViewManager](https://github.com/arturjaworski/TableViewManager). Remember that you don't need to use enum if you don't want to.
+
+### Step 2
+
+Remember about import.
 
 ```swift
 import TableViewAutolayoutManager
 ```
 
 ```swift
-extension ViewController: TableViewAutolayoutManagerProtocol {
+class ViewController: UIViewController, TableViewAutolayoutManager {
     // (...)
 }
 ```
 
-### Step 2
+### Step 3
 
 Implemment `tableView(_:heightForRowAtIndexPath:)` as below.
 
 ```swift
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.tableViewAutolayoutManager(tableView, heightForRowAtIndexPath: indexPath)
     }
