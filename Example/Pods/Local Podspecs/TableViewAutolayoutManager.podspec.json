@@ -1,8 +1,8 @@
 {
   "name": "TableViewAutolayoutManager",
-  "version": "0.1",
+  "version": "0.2",
   "summary": "Dynamic custom UITableViewCell height based on autolayout.",
-  "description": "Automatically taking care of dynamic custom UITableViewCell height. Written in Swift.",
+  "description": "Automatically takes care of custom UITableViewCell dynamic height. Written in Swift.",
   "homepage": "https://github.com/arturjaworski/TableViewAutolayoutManager",
   "license": "MIT",
   "authors": {
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/arturjaworski/TableViewAutolayoutManager.git",
-    "tag": "0.1"
+    "tag": "0.2"
   },
   "platforms": {
     "ios": "8.0"

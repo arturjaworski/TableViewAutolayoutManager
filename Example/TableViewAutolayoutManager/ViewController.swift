@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TableViewManager
 import TableViewAutolayoutManager
 
 class ViewController: UIViewController {
@@ -43,7 +44,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension ViewController: TableViewAutolayoutManagerProtocol {
+extension ViewController: TableViewManager, EnumTableViewManager, TableViewAutolayoutManager {
     func tableView(tableView: UITableView, cellIdentifierForIndexPath indexPath: NSIndexPath) -> TableViewCellsIdentifiers {
         if indexPath.section == 1 {
             return .ImageTableViewCell
@@ -51,7 +52,7 @@ extension ViewController: TableViewAutolayoutManagerProtocol {
         return .TextTableViewCell
     }
     
-    func tableView(tableView: UITableView, configureCell cell: UITableViewCell, withCellIdentifier cellIdentifier: TableViewCellsIdentifiers, forIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, configureCell cell: UITableViewCell, forIndexPath indexPath: NSIndexPath) {
         if let cell = cell as? TextTableViewCell {
             cell.myLabel.text = indexPath.row == 0 ? "Lorem Ipsum" : "Lorem ipsum dolor sit amet, cu per sensibus quaerendum, eam ut veniam postulant reformidans. Quodsi periculis no eos. Soleat audiam eu sed, quo esse platonem reprehendunt ei, eu vero rebum mel. Corpora tractatos evertitur ex mea, eu vim minim fabellas, quot tempor explicari mel ex. Sea no dicat atqui homero, ex dictas antiopam comprehensam eum."
         }

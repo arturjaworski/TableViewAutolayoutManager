@@ -1,7 +1,7 @@
 PODS:
-  - TableViewAutolayoutManager (0.1):
+  - TableViewAutolayoutManager (0.2):
     - TableViewManager
-  - TableViewManager (0.1.1)
+  - TableViewManager (0.2)
 
 DEPENDENCIES:
   - TableViewAutolayoutManager (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TableViewAutolayoutManager: e2f5f30c75870ddcdfb57c4e5356eb392820f0ec
-  TableViewManager: 683dcf12a6575094eaef60ba3b4f543bf11ed851
+  TableViewAutolayoutManager: 961474f8e9dd7a56a92c6060f1f62d065015dc7e
+  TableViewManager: e1baf808aa7e01a448a19e5de243c8b6a58b1d98
 
 COCOAPODS: 0.39.0

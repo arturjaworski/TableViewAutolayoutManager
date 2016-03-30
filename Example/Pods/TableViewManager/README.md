@@ -4,6 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/TableViewManager.svg?style=flat)](http://cocoapods.org/pods/TableViewManager)
 [![Platform](https://img.shields.io/cocoapods/p/TableViewManager.svg?style=flat)](http://cocoapods.org/pods/TableViewManager)
 
+## Description
+
+Pod registers Nibs and allows you to handle all custom UITableViewCells with enum. Written in Swift.
+
 ## Installation
 
 TableViewManager is available through [CocoaPods](http://cocoapods.org). To install

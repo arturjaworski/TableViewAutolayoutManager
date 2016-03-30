@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B270E617F335F161F130F4C1'
+               BlueprintIdentifier = '3FE803F5D3FD9377F751A39E'
                BlueprintName = 'TableViewAutolayoutManager'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TableViewAutolayoutManager.framework'>

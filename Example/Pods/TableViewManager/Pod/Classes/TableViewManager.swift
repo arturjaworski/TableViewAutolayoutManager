@@ -6,50 +6,55 @@
 //
 //
 
-public protocol TableViewManagerProtocol {
-    typealias TableViewCellsIdentifiers: RawRepresentable
-    
-    func tableView(tableView: UITableView, cellIdentifierForIndexPath indexPath: NSIndexPath) -> TableViewCellsIdentifiers
-    func tableView(tableView: UITableView, configureCell cell: UITableViewCell, withCellIdentifier cellIdentifier: TableViewCellsIdentifiers, forIndexPath indexPath: NSIndexPath)
-    func tableView(tableView: UITableView, nibNameForCellIdentifier cellIdentifier: TableViewCellsIdentifiers) -> String?
+public protocol TableViewManager {
+    func tableView(tableView: UITableView, cellIdentifierForIndexPath indexPath: NSIndexPath) -> String
+
+    /* optional */
+    func tableView(tableView: UITableView, configureCell cell: UITableViewCell, forIndexPath indexPath: NSIndexPath)
+    func tableView(tableView: UITableView, nibNameForCellIdentifier cellIdentifier: String) -> String?
 }
 
-public extension TableViewManagerProtocol where Self: protocol<UITableViewDelegate, UITableViewDataSource>, TableViewCellsIdentifiers.RawValue == String {
-    
-    func tableView(tableView: UITableView, nibNameForCellIdentifier cellIdentifier: TableViewCellsIdentifiers) -> String? {
-        return nil
-    }
-    
+public extension TableViewManager {
+
     func tableViewManager(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = self.tableView(tableView, cellIdentifierForIndexPath: indexPath)
-        let cell: UITableViewCell = self.dequeueReusableCell(tableView, forIdentifier: cellIdentifier)
-        
-        self.tableView(tableView, configureCell: cell, withCellIdentifier: cellIdentifier, forIndexPath: indexPath)
+        let cell: UITableViewCell = self.tableViewManager(tableView, dequeueReusableCellForIdentifier: cellIdentifier)
+
+        self.tableView(tableView, configureCell: cell, forIndexPath: indexPath)
         return cell
     }
-    
-    func dequeueReusableCell(tableView: UITableView, forIdentifier cellIdentifier: TableViewCellsIdentifiers) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier.rawValue) {
+
+    func tableViewManager(tableView: UITableView, dequeueReusableCellForIdentifier cellIdentifier: String) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) {
             return cell
         }
 
         self.registerCell(tableView, forIdentifier: cellIdentifier)
-        return tableView.dequeueReusableCellWithIdentifier(cellIdentifier.rawValue)!
+        return tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
     }
-    
-    private func registerCell(tableView: UITableView, forIdentifier cellIdentifier: TableViewCellsIdentifiers) {
-        
+
+    /* default implementation */
+    func tableView(tableView: UITableView, nibNameForCellIdentifier cellIdentifier: String) -> String? {
+        return nil
+    }
+
+    func tableView(tableView: UITableView, configureCell cell: UITableViewCell, forIndexPath indexPath: NSIndexPath) {
+
+    }
+
+    /* private */
+    private func registerCell(tableView: UITableView, forIdentifier cellIdentifier: String) {
         var nibName: String
         if let name = self.tableView(tableView, nibNameForCellIdentifier: cellIdentifier) {
             nibName = name
         }
         else {
-            nibName = cellIdentifier.rawValue
+            nibName = cellIdentifier
         }
-        
+
         tableView.registerNib(
             UINib(nibName: nibName, bundle: nil),
-            forCellReuseIdentifier: cellIdentifier.rawValue
+            forCellReuseIdentifier: cellIdentifier
         )
     }
     
